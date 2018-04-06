@@ -1,0 +1,677 @@
+@import url('font.css');
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main_page {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    min-height: 100%;
+    /* background: linear-gradient(#00c6ff, #0072ff);*/
+    background-image: url(background.jpg);
+}
+
+.logo {
+    margin-top: 75px;
+}
+
+.logo_box {
+    width: 190px;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: 0 auto;
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.15)
+}
+
+.quiq_frame {
+    width: 40%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.quiz_frame_take {
+    width: 70%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.quiz_heading {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+.quiz_heading h2 {
+    font-family: 'Lato-black';
+    font-size: 36px;
+    color: #258cf5;
+}
+
+.quiz_option {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.quiz_option .login_btn {
+    width: 50%;
+    display: block;
+    font-size: 24px;
+    font-family: 'Lato-bold';
+    background: #258cf5;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+}
+
+.quiz_option .login_btn:hover {
+    background: #fe8d08;
+}
+
+.quiz_option .take_quiz_btn {
+    width: 50%;
+    display: block;
+    font-size: 24px;
+    font-family: 'Lato-bold';
+    background: #b6b6b6;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.quiz_option .take_quiz_btn:hover {
+    background: #258cf5;
+}
+
+.quiz_heading p {
+    font-size: 16px;
+    color: #999999;
+    font-family: 'Lato-regular';
+    margin-top: 10px;
+}
+
+.quiz_option .boxes input {
+    width: 90%;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.quiz_option .admin_login_btn {
+    width: 50%;
+    display: block;
+    font-size: 24px;
+    font-family: 'Lato-bold';
+    background: #258cf5;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+.quiz_option .admin_login_btn:hover {
+    background: #fe8d08;
+}
+
+.quiz_list {
+    width: 80%;
+    background: #fff;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    background: #f5f5f5;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.quiz_list table {
+    width: 100%;
+    display: block;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: none;
+}
+
+.quiz_list table thead {
+    width: 100%;
+    display: block;
+    font-family: 'Lato-black';
+}
+
+.quiz_list table thead tr {
+    width: 100%;
+    display: block;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz_list table thead tr th {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-right: 1px solid #258cf5;
+    border-bottom: 1px solid #258cf5;
+    width: 50%;
+    background: #e5e5e5;
+    padding: 14px 0px;
+}
+
+.quiz_list table thead tr th:first-child {
+    border-left: none;
+}
+
+.quiz_list table thead tr th:last-child {
+    border-right: none;
+    margin-right: 20px;
+}
+
+.quiz_list table tbody {
+    width: 100%;
+    display: block;
+    font-family: 'Lato-regular';
+    height: 100%;
+    overflow: scroll;
+}
+
+.quiz_list table tbody tr {
+    width: 100%;
+    display: block;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz_list table tbody tr td {
+    font-size: 14px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    width: 50%;
+    text-align: center;
+    padding: 8px 0px;
+    color: #737373;
+}
+
+.quiz_list table tbody tr td:first-child {
+    border-left: none;
+}
+
+.quiz_list table tbody tr td:last-child {
+    border-right: none;
+    padding: 5px 0px;
+}
+
+.quiz_list table tbody .take_quiz_btn {
+    width: 80%;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-bold';
+    background: #b6b6b6;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.quiz_list table tbody .take_quiz_btn:hover {
+    background: #fe8d08;
+}
+
+.scroll {
+    margin-top: -15px;
+    background: #fff;
+    text-align: center;
+    ;
+}
+
+.scroll h1 {
+    color: #258cf5;
+}
+
+.options_list {
+    width: 50%;
+}
+
+.quiz_list.options_list {
+    margin-top: 20px;
+}
+
+.quiz_list.options_list table tbody {
+    width: 102.8%;
+}
+
+.option_buttons {
+    width: 70%;
+    margin: 50px auto 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option_buttons .take_quiz_btn {
+    width: 175px;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-black';
+    background: #fff;
+    text-decoration: none;
+    color: #258cf5;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.option_buttons .take_quiz_btn:hover {
+    background: #fe8d08;
+    color: #fff;
+}
+
+.option_buttons .take_quiz_btn span {
+    margin-right: 10px;
+}
+
+.input_data .take_quiz_btn {
+    width: 175px;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-black';
+    background: #fff;
+    text-decoration: none;
+    color: #258cf5;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.input_data .take_quiz_btn:hover {
+    background: #fe8d08;
+    color: #fff;
+}
+
+.input_data .take_quiz_btn span {
+    margin-right: 10px;
+}
+
+.input_data {
+    width: 50%;
+    margin: 0px auto 0px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.result {
+    width: 350px;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Lato-black';
+    background: #ffffff;
+    color: #0072ff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin: 0 auto;
+    box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.15)
+}
+
+.result p {
+    font-size: 16px;
+    color: #999999;
+    font-family: 'Lato-regular';
+    margin-top: 10px;
+}
+
+.mylist {
+    padding: 5px;
+}
+
+.quiz_body {
+    padding: 10px;
+}
+
+.mylist ol,
+li {
+    display: flow-root;
+    list-style: none;
+}
+
+
+/* .mylist>li {
+    border-bottom: 1.5px dotted blue;
+} */
+
+.mylist li .que .div2 {
+    padding: 5px;
+}
+
+.mylist h1 {
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Lato-black';
+}
+
+.mylist li .que .div2 ol li:nth-child(n) {
+    width: 50%;
+    float: left;
+}
+
+.mylist li .que .div2 ol li {
+    font-size: 16px;
+    color: #737373;
+    font-family: 'Lato-regular';
+}
+
+.hidden {
+    width: 100%;
+    float: left;
+    margin: 10px 0px;
+    font-family: 'Lato-black';
+}
+
+.clock_div {
+    width: 250px;
+    font-size: 20px;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Lato-black';
+    background: #ffffff;
+    color: #0072ff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin: 40px auto 0px;
+}
+
+.buttonSubmit #submit {
+    width: 175px;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-black';
+    background: #258cf5;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 20px auto 10px;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.quiz_list table tbody tr td .newQue.take_quiz_btn {
+    width: 80%;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-bold';
+    background: #b6b6b6;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.quiz_list table tbody tr td .take_quiz_btn:hover {
+    background: #fe8d08;
+}
+
+.empty {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    text-align: center;
+    color: #456446;
+}
+
+.input_data input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.input_data input[type="text"]:disabled {
+    width: 40%;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.input_data .radio {
+    width: auto;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin: 20px;
+}
+
+.input_data .radio:hover {
+    background: #fe8d08;
+}
+
+.input_data input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    background: #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+.input_data .save {
+    width: 25%;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Lato-bold';
+    background: #fff;
+    text-decoration: none;
+    color: #258cf5;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.input_data .save:hover {
+    background: #fe8d08;
+    color: #fff;
+}
+
+.quiz_list #table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: none;
+}
+
+.quiz_list #table2 thead {
+    width: 100%;
+    display: block;
+    font-family: 'Lato-black';
+}
+
+.quiz_list #table2 thead tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz_list #table2 thead tr th {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-right: 1px solid #258cf5;
+    border-bottom: 1px solid #258cf5;
+    flex: 1 1 auto;
+    background: #e5e5e5;
+    padding: 14px 0px;
+}
+
+.quiz_list #table2 thead tr th:first-child {
+    border-left: none;
+    max-width: 5%;
+}
+
+.quiz_list #table2 thead tr th:last-child {
+    border-right: none;
+    margin-right: 20px;
+    max-width: 10%;
+}
+
+.quiz_list #table2 tbody {
+    width: 100%;
+    display: block;
+    font-family: 'Lato-regular';
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.quiz_list #table2 tbody tr {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz_list #table2 tbody tr td {
+    font-size: 14px;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 8px 0px;
+    color: #737373;
+    width: 80%
+}
+
+.quiz_list #table2 tbody tr td:first-child {
+    flex: 1 1 auto;
+    max-width: 5%;
+    border-left: none;
+}
+
+.quiz_list #table2 tbody tr td:last-child {
+    border-right: none;
+    padding: 5px 0px;
+    max-width: 10%;
+    flex: 1 1 auto;
+}
+
+.quiz_list #table2 tbody input {
+    width: 80%;
+    display: block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-family: 'Lato-bold';
+    background: #b6b6b6;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 4px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+    cursor: pointer;
+}
+
+.quiz_list #savebtn {
+    width: 20%;
+    display: block;
+    font-size: 24px;
+    font-family: 'Lato-bold';
+    background: #258cf5;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    transition: all 0.1s ease-in;
+}
+
+.quiz_list #savebtn:hover {
+    background: #fe8d08;
+}
+
+.quiz_list {
+    padding: 10px;
+}

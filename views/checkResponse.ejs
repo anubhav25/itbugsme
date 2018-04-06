@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main_page">
+			<div class="main_container">
+				<% if(resp.length < 1) { %>
+				<div class="empty quiz_list" >
+				<h1>
+				No Response Present.
+				<br>
+				Please Wait for SomeOne to submit a Response.
+				</h1>
+				</div>
+				<% } else { %>
+				<div class="quiz_list" id="show">
+					<table id="table" >
+						<thead>
+							<tr>
+								<th>EMAIL</th>
+								<th>CHECK RESPONSES</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i in resp) { %>
+							<tr>
+								<td><%= resp[i].email %></td>
+								<td><a href="/admin/checkResponse/<%= resp[i].email %>" class="take_quiz_btn">CHECK RESPONSES</a></td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

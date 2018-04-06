@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Login</title>
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<div class="main_page">
+			<div class="main_container">
+			<div class="quiz_list" id="show">
+							<div class="login">
+								<form action="/admin/marks" method="post">
+				<input type="hidden" value="<%= email %>" name="email" />
+					<table id="table2" >
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>Response</th>
+								<th>Marks</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i in answers) { %>
+							<tr>
+								<td><%= parseInt(i)+1 %></td>
+								<td><textarea rows="5" width='100%' disabled><%= answers[i] %></textarea></td>
+								<td ><input type="number" height="50px" name="<%= i %>"/></td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+
+
+					<button type="submit" class="admin_login_btn" id="savebtn">Save</button>
+
+							</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+	</body>
+</html>

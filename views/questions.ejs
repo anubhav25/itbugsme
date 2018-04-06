@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<title>anubhav</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  
+
+html {
+  height: 100%;
+}
+body {
+  height: 95%;
+}
+.mySlides {
+  display: flex;
+  flex-direction: column;
+  height:100%;
+}
+.question{
+  flex:0 1 auto;
+}
+.program{
+  overflow-y: scroll;
+  flex:1 1 auto;
+  
+}
+.text_area{
+  
+  flex:0 1 auto;
+  width: 100%;
+}
+textarea {
+  width: 100%
+
+}
+
+</style>
+<body>
+
+
+
+<div >
+  <form action="/submit" method='post'>
+  <div>
+  <button type="button" onclick="plusDivs(-1)">PREVIOUS</button>
+  <button type="button" onclick="plusDivs(1)">NEXT</button>
+  <button type="button" onclick="submitForm()" style="float: right">SUBMIT</button>
+  <button type="submit" style="display: none" id="submit"></button>
+
+
+</div>
+<% for(var i in ques) {%>
+<div class="mySlides">
+          <div class="question" >
+        <h3 >
+          <%= ques[i].no %> : <%= ques[i].que %>
+          </h3>
+      </div>
+      <div class="middle" >
+        <textarea rows="20" disabled><%= ques[i].program %></textarea>
+      </div>
+      <div class="text_area" >
+
+        <textarea rows="10" name="<%= i %>" class="textarea" id="textarea<%= i %>" onkeyup="save(this)" placeholder="Your answer..." >
+
+
+</textarea>
+
+      </div>
+  </div>
+<%}%>
+</form>
+</div>
+
+<script>
+
+function submitForm() {
+  if(confirm('do you really want to submit'))
+    {
+      document.getElementById('submit').click();
+    }
+
+}
+function save(event){
+  var id = parseInt(event.id.substr(8))+1;
+   try{
+  response = JSON.parse(localStorage.response) }
+  catch(e){
+    response = {}
+  }
+   response[id] = event.value;
+   localStorage.response = JSON.stringify(response);
+}
+
+var response = {};
+var slideIndex = 0;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+ var i;
+  var x = document.getElementsByClassName("mySlides");
+
+  if (n >= x.length) {slideIndex = 0}
+  if (n < 0) {slideIndex = x.length-1}
+  console.log(n)  
+    try {
+      response = JSON.parse(localStorage.response);
+    } catch (e) {
+       response = {};
+    }
+//console.log(response);
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+     x[i].querySelector('.textarea').value = response[i+1] || '' ;
+  }
+  x[slideIndex].style.display = "block";  
+}
+
+</script>
+
+</body>
+</html>

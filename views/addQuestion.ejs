@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>
+			Quiz
+		</title>
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="main_page">
+				<div class="main_container">
+					<form method="post" action="/admin/newQue">
+					<div class="quiq_frame">
+						<div class="quiz_heading">
+							<h3>Question no <%= no %></h3>
+							<textarea width = '100%' rows= 3 name="que"></textarea>
+							<input type="hidden" value=<%= no %> name = "no">
+						</div>
+						<div class="quiz_option" style="padding: 15px">
+							<h3>Program</h3>
+							<textarea width = '100%' rows= 10 name="program"></textarea>
+
+						</div>
+
+
+					</div>
+
+<center class= "quiz_option"><button type="submit" class="take_quiz_btn" style="width: 100px" >SAVE</button></center>				</div>
+			</div>
+		</div>
+	</body>
+</html>

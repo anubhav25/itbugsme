@@ -23,7 +23,7 @@ server.listen(port, () => {
 });;
 var dburl = 'mongodb://localhost/itbugsme';
 /*dburl = 'mongodb://test:test@ds119129.mlab.com:19129/lifeshare'*/
-dburl = 'mongodb://a :a@ds237669.mlab.com:37669/itbugsme'
+dburl = 'mongodb://a:a@ds237669.mlab.com:37669/itbugsme'
 mongoose.connect(dburl);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

@@ -126,5 +126,44 @@ app.get('/marks',isLogin,(req,res)=>{
 		}
 	})
 })
+app.get('/finalmarks',(req,res)=>{
+	marks.find({},{_id:0,__v:0},(err,marks)=>{
+		if(err){
+			 res.render('login',{ err : 'server error'});
+		}else{
+			/*for(var i  in marks){
 
+			}
+			res.render('finalresult',{marks : marks });*/
+		user.find({},{_id:0,__v:0},(err,users)=>{
+			if(err){
+			 res.render('login',{ err : 'server error'});
+		}else{
+			var temp = {};
+			for (var i in marks) {
+				temp[i] = {};
+				var t = find(users,marks[i].email)
+				//console.log(t)
+				temp[i].name = t.name;
+				temp[i].email = t.email;
+				temp[i].phone = t.phoneNo;
+				temp[i].total = marks[i].total;
+				//console.log(temp);
+			}
+			res.render('finalresult',{ marks : temp });
+		}
+		})
+		}
+
+	})
+})
+
+function find(a,b) {
+	for (var i in a){
+		if(a[i].email===b){
+			return a[i];
+		}
+	}
+	return 0;
+}
 module.exports = app;

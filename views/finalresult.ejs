@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main_page">
+			<div class="main_container">
+				<% if(marks.length < 1) { %>
+				<div class="empty quiz_list" >
+				<h1>
+				No Result Present.
+				<br>
+				Please Wait for SomeOne to submit a Result.
+				</h1>
+				</div>
+				<% } else { %>
+				<div class="quiz_list" id="show">
+					<table id="table" >
+						<thead>
+							<tr>
+
+								<th>NAME</th>
+								<th>EMAIL</th>
+								<th>PHONE</th>
+								<th>MARKS</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i in marks) { %>
+							<tr id ="<%= i %>">
+								<td><%= marks[i].name %></td>
+								<td><%= marks[i].email %></td>
+								<td><%= marks[i].phone %></td>
+								<td><%= marks[i].total %></td>
+							</tr>
+							<% } %>
+						</tbody>
+					</table>
+
+				</div>
+				<% } %>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function hide(i){
+		document.getElementById(i+"").style.display="none";
+	}
+</script>
+</html> 
